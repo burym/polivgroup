@@ -1,0 +1,108 @@
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:visible;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:3px; border:0; display:block; max-width:none;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/*
+    User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#cboxOverlay{background:#000;}
+#colorbox{}
+    #cboxContent{
+	    margin:20px;
+	    padding: 16px;
+	    background-color: #FFFFFF;
+	    /*border: 5px solid #a00000;*/
+
+    }
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;}
+        #cboxLoadedContent{
+	        position: relative;
+	        z-index: 10;
+        }
+        #cbox-content-box-border {
+	        position: absolute;
+	        top: 2px;
+	        right: 2px;
+	        bottom: 2px;
+	        left: 2px;
+	        border:3px solid #CD4141;
+        }
+        #cboxTitle{position:absolute; top:-20px; left:0; color:#ccc;}
+        #cboxCurrent{position:absolute; top:-20px; right:40px; color:#ccc;}
+        #cboxSlideshow{position:absolute; top:-20px; right:120px; color:#fff;}
+        #cboxPrevious{
+          position:absolute; z-index: 10; top:50%; left:0px; margin-top:-35px;
+          height: 60px; width: 60px;
+          text-indent:-9999px;
+/*-khtml-border-radius: 50%; border-radius: 50%; */
+-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+          background:#97c246 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAgCAYAAAAffCjxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAL5JREFUeNqs1m0KgzAMBuBOven8s9Moboow/Nx1dqZ1CVgooWps38ILKuWBVptorLUmMjdKTyn5PhXh8aPcUxE33jFIJ5CBn0OQK3vEk9sAkrk5WuQlkNFHNJAKOYMYeQpkouSh+UdIo0X2oBAyHyEhiJFaIMsZIqFoxIcYqQSyahEfksjnCuKgZISTGdRALg262bDXD/0goUcEemihZQRa2KClFlr8oe0I2iChLXv3J6KILRqUx3b9pQx/AQYAg6nJFQTeVE0AAAAASUVORK5CYII=") no-repeat 46% 50%;
+          }
+        #cboxPrevious:hover{ background:#78AB2C url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAgCAYAAAAffCjxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAL5JREFUeNqs1m0KgzAMBuBOven8s9Moboow/Nx1dqZ1CVgooWps38ILKuWBVptorLUmMjdKTyn5PhXh8aPcUxE33jFIJ5CBn0OQK3vEk9sAkrk5WuQlkNFHNJAKOYMYeQpkouSh+UdIo0X2oBAyHyEhiJFaIMsZIqFoxIcYqQSyahEfksjnCuKgZISTGdRALg262bDXD/0goUcEemihZQRa2KClFlr8oe0I2iChLXv3J6KILRqUx3b9pQx/AQYAg6nJFQTeVE0AAAAASUVORK5CYII=") no-repeat 46% 50%; }
+        #cboxNext{
+          position:absolute; z-index: 10; top:50%;
+          right:0px; margin-top:-35px;
+          background:#97c246 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAgCAYAAAAffCjxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANFJREFUeNrElmkKwkAMhdPqkbyR/vE0ihuC1PWexgRb0JC2mfjAwBs6M/Sjs+SlxMwkWoiOoqrtF0ubuejJ70jDtDnxd6Rg1L7UGNihFNY9/Az77NQObB+F2QGFnQ1sF4F5gylY38REdDGw7RBs6HM92KYPNraJCrtGYJGjVdjNwNYWFr1wo7CSNFDY3cBWHaw0ORX2cGCUsQwXVhMq/rE0yGZDjh9yISEpAklaiI1AjA1itRDzh5QjWIGElWzIT8RUDKARVaKZaKmGkHGRlwADAFxnyH432wu6AAAAAElFTkSuQmCC") no-repeat 54% 50%;
+          width:60px; height:60px;
+/*-khtml-border-radius: 50%; border-radius: 50%; */
+          text-indent:-9999px;
+-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+          }
+        #cboxNext:hover{ background:#78AB2C url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAgCAYAAAAffCjxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANFJREFUeNrElmkKwkAMhdPqkbyR/vE0ihuC1PWexgRb0JC2mfjAwBs6M/Sjs+SlxMwkWoiOoqrtF0ubuejJ70jDtDnxd6Rg1L7UGNihFNY9/Az77NQObB+F2QGFnQ1sF4F5gylY38REdDGw7RBs6HM92KYPNraJCrtGYJGjVdjNwNYWFr1wo7CSNFDY3cBWHaw0ORX2cGCUsQwXVhMq/rE0yGZDjh9yISEpAklaiI1AjA1itRDzh5QjWIGElWzIT8RUDKARVaKZaKmGkHGRlwADAFxnyH432wu6AAAAAElFTkSuQmCC") no-repeat 54% 50%; }
+        #cboxLoadingOverlay{background:#000;}
+        #cboxLoadingGraphic{background:url(images/loading.gif) no-repeat center center;}
+        #cboxClose{
+           display: none;
+	        position: absolute;
+			    z-index: 10;
+	        top: -25px;
+	        right: -25px;
+	        width: 45px;
+	        height: 45px;
+	        border: none;
+	        cursor: pointer;
+-webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+	        /* background: url("/img/close-button.png") no-repeat #a00000; */
+	        background: #97c246  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIJJREFUeNqsU1EOgCAIZR1Dv73/BYpz1GnIl7Y1E6EZ25sTeE9RIBFJGWtGyCAnkLuBiw1Lsd0pgpyjcrh1WCLPXKyhF9BEXmT4zQQr5jllJEyeOlWyJtCKqGRgoVn7u4SpR5z6xmBdddRIHvKN2GtldpJ7ItcwpSryZZxj5aRTgAEAKH0ZcWdadP4AAAAASUVORK5CYII=") no-repeat 50% 50%;
+        }
+         #cboxClose:hover{ background: #78AB2C url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIJJREFUeNqsU1EOgCAIZR1Dv73/BYpz1GnIl7Y1E6EZ25sTeE9RIBFJGWtGyCAnkLuBiw1Lsd0pgpyjcrh1WCLPXKyhF9BEXmT4zQQr5jllJEyeOlWyJtCKqGRgoVn7u4SpR5z6xmBdddRIHvKN2GtldpJ7ItcwpSryZZxj5aRTgAEAKH0ZcWdadP4AAAAASUVORK5CYII=") no-repeat 50% 50%;  }
+
+#colorbox { padding:0 60px; }
+
+#colorbox.objbox #cboxContent {  }
+#colorbox.objbox #cboxTitle {
+	top:auto;/* bottom:100;*/
+	left:0; right: 0;
+	background: #fff;
+	padding: 5px 25px 10px 25px;
+}
+#colorbox.objbox #cboxTitle p {
+  font:14px "Open Sans", Verdana, Geneva, sans-serif; color:#202020; margin: 12px 0 6px 0;
+  padding-top: 12px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAADCAIAAACBNbHxAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhJREFUeNpinHLAmWGAABPDwIGBtBsgwABSfQGduxNwrwAAAABJRU5ErkJggg==") no-repeat 0% 0%;
+}
+#colorbox.objbox #cboxTitle > div { margin-bottom: 10px; margin-top: 5px; }
+#colorbox.objbox #cboxTitle > div output { padding-top: 0; padding-left: 12px; margin-left: 12px; border-left: 1px solid #97c246;  display: inline-block; font-family: "Open Sans", Arial, Helvetica, sans-serif; font-size: 20px; font-weight: 300; }
+#colorbox.objbox #cboxTitle > div output span { color: #97c246; font-weight: 400; }
+#colorbox.objbox #cboxTitle > div output:first-child { padding-left: 0px; margin-left: 0px; border-left: none; }
+
+
+
